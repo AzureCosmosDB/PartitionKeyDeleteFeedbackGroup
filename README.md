@@ -10,9 +10,7 @@ Because the number of documents to be deleted may be large, the operation runs i
 To help govern the resources used by this background task, the delete by partition key operation consumes up to a pre-set fraction of the total available RU/s on the container. By default, the fraction is set to 10%. 
 
 > [!IMPORTANT]
-> This feature is currently in private preview. You can find the the private preview drop of the .NET V3 SDK that supports this feature in this repo. Support for other SDKs is planned and not yet available. 
-
-#### [.NET](#tab/dotnet-example)
+> This feature is currently in private preview. You can find the private preview drop of the .NET V3 SDK that supports this feature in this repo. Support for other SDKs is planned and not yet available. 
 
 ## Sample code
 Use the private preview of version 3.x of the Azure Cosmos DB .NET SDK to delete items by partition key. 
