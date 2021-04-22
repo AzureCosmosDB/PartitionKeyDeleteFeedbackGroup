@@ -65,7 +65,7 @@ Currently, the 0.1 fraction is set by the Cosmos DB service. We are looking into
 For certain scenarios, the effects of a delete by partition key operation is not guaranteed to be immediately reflected. The effect may be partially seen as the operation progresses. 
 
 - Aggregate queries that use the index - for example, COUNT queries - that are issued during an ongoing delete by partition key operation may contain the results of the documents to be deleted. This may occur until the delete operation is fully complete.
-    - If a query is impacted by this issue, the query response will contain a header ```TBD``` that you can check in your application. 
+
 - Queries issued against the analytical store during an ongoing delete by partition key operation may contain the results of the documents to be deleted. This may occur until the delete operation is fully complete.
 
 ## How to give feedback or report an issue/bug.
