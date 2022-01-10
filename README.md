@@ -68,5 +68,7 @@ For certain scenarios, the effects of a delete by partition key operation is not
 
 - Queries issued against the analytical store during an ongoing delete by partition key operation may contain the results of the documents to be deleted. This may occur until the delete operation is fully complete.
 
+- Continuous backup (point in time restore) - a restore that is triggered during an ongoing delete by partition key operation may contain the results of the documents to be deleted in the restored collection. It is not recommended to use this preview feature if you have a scenario that requires continuous backup. 
+
 ## How to give feedback or report an issue/bug.
 * Create an issue in this repo with your feedback/issue/bug.
