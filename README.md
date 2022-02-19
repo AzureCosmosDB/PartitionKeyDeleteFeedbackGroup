@@ -12,6 +12,9 @@ To help govern the resources used by this background task, the delete by partiti
 > [!IMPORTANT]
 > This feature is currently in private preview. You can find the private preview drop of the .NET V3 SDK that supports this feature in this repo. Support for other SDKs is planned and not yet available. 
 
+## Pre-requisites
+The ability to use this preview feature must be enabled on your Cosmos DB account(s). Please use this sign-up form and include your Cosmos DB account info: https://aka.ms/cosmosPkDeleteSignup.
+
 ## Sample code
 Use the private preview of version 3.x of the Azure Cosmos DB .NET SDK to delete items by partition key. 
 
