@@ -10,10 +10,14 @@ Because the number of documents to be deleted may be large, the operation runs i
 To help govern the resources used by this background task, the delete by partition key operation consumes up to a pre-set fraction of the total available RU/s on the container. By default, the fraction is set to 10%. 
 
 > [!IMPORTANT]
-> This feature is currently in private preview. You can find the private preview drop of the .NET V3 SDK that supports this feature in this repo. Support for other SDKs is planned and not yet available. 
+> This feature is currently in private preview. The feature is supported in the latest versions of the preview versions of the Cosmos DB .NET V3 and Java V4 SDKs. Support for other SDKs is planned and not yet available. 
 
 ## Pre-requisites
 The ability to use this preview feature must be enabled on your Cosmos DB account(s). Please use this sign-up form and include your Cosmos DB account info: https://aka.ms/cosmosPkDeleteSignup.
+
+Find the latest preview version of the supported SDK:
+ - [.NET V3 SDK](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.25.0-preview) - version 3.25.0-preview (or a higher preview version)
+ - [Java V4 SDK](https://mvnrepository.com/artifact/com.azure/azure-cosmos) - version 4.19.0 or higher (the delete by partition key API will be marked as beta)
 
 ## Sample code
 Use the private preview of version 3.x of the Azure Cosmos DB .NET SDK to delete items by partition key. 
@@ -33,7 +37,10 @@ ResponseMessage deleteResponse = await container.DeleteAllItemsByPartitionKeyStr
 ```
 #### [Java](#tab/java-example)
 ```java
-// Java support is not yet available
+
+// Delete by logical partition key
+CosmosItemResponse<?> deleteResponse = container.deleteAllItemsByPartitionKey(
+            new PartitionKey("LogicalPartitionKeyValue"), new CosmosItemRequestOptions()).block();
 ```
 
 #### [Python](#tab/python-example)
