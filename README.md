@@ -13,7 +13,9 @@ To help govern the resources used by this background task, the delete by partiti
 > This feature is currently in private preview. The feature is supported in the latest versions of the preview versions of the Cosmos DB .NET V3 and Java V4 SDKs. Support for other SDKs is planned and not yet available. 
 
 ## Pre-requisites
-The ability to use this preview feature must be enabled on your Cosmos DB account(s). Please use this sign-up form and include your Cosmos DB account info: https://aka.ms/cosmosPkDeleteSignup.
+The ability to use this preview feature must be enabled on your Cosmos DB account(s). In the Azure Portal, from the Subscription overview page, go to **Preview Features** and register for the **DeleteAllItemsByPartitionKey** feature.
+
+[Instructions](https://docs.microsoft.com/azure/azure-resource-manager/management/preview-features?tabs=azure-portal#register-preview-feature)
 
 Find the latest preview version of the supported SDK:
  - [.NET V3 SDK](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.25.0-preview) - version 3.25.0-preview (or a higher preview version)
